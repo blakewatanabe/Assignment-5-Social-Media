@@ -1,3 +1,4 @@
+import java.util.Calendar;
 import java.util.Date;
 
 public class Main {
@@ -30,14 +31,14 @@ public class Main {
         davidwilson.addConnection(davidBlockedCarol);
 
         // Create a post by Alice
-        Post postByAlice = new Post("Hello, world!", 0, 0, new Date(2024,7,16));
+        Post postByAlice = new Post("Hello, world!", 0, 0, new Date(2024, Calendar.JULY,16));
         alicejohnson.getPostsAuthored().add(postByAlice);
 
         // Bob views and comments on Alice's post
         postByAlice.addViewer(bobsmith);
         bobsmith.getPostsViewed().add(postByAlice);
 
-        Comment bobComment = new Comment("Nice post!", bobsmith, new Date(2024,7,18));
+        Comment bobComment = new Comment("Nice post!", bobsmith, new Date(2024, Calendar.JULY,18));
         postByAlice.addComment(bobComment);
         bobsmith.getComments().add(bobComment);
 
@@ -46,14 +47,14 @@ public class Main {
         caroldavis.getPostsViewed().add(postByAlice);
 
         // David creates a post
-        Post postByDavid = new Post("I'm happy to share that I just got a new job at XYZ corporation!", 0, 0, new Date(2024, 5, 1));
+        Post postByDavid = new Post("I'm happy to share that I just got a new job at XYZ corporation!", 0, 0, new Date(2024, Calendar.MARCH, 1));
         davidwilson.getPostsAuthored().add(postByDavid);
 
         // Alice views and comments on David's post
         postByDavid.addViewer(alicejohnson);
         alicejohnson.getPostsViewed().add(postByDavid);
 
-        Comment aliceComment = new Comment("Congratulations David!", alicejohnson, new Date(2024,5,3));
+        Comment aliceComment = new Comment("Congratulations David!", alicejohnson, new Date(2024, Calendar.MARCH,3));
         postByDavid.addComment(aliceComment);
         alicejohnson.getComments().add(aliceComment);
 
