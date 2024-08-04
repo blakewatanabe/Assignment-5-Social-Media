@@ -1,5 +1,3 @@
-package org.example.javafxtest;
-
 import java.util.ArrayList;
 import java.util.List;
 
