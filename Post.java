@@ -7,7 +7,7 @@ public class Post {
     private int numberOfComments;
     private int numberOfViews;
     private double importanceValue;
-    private Date creationDate;
+    private Date dateCreated;
     private List<Comment> comments;
     private List<User> viewers;
 
@@ -15,7 +15,7 @@ public class Post {
         this.content = content;
         this.numberOfComments = numberOfComments;
         this.numberOfViews = numberOfViews;
-        this.creationDate = creationDate;
+        this.dateCreated = dateCreated;
         this.comments = new ArrayList<>();
         this.viewers = new ArrayList<>();
         // Weights can be changed to make one worth more than the other (alpha is for # of comments, beta is # of views)
@@ -55,12 +55,12 @@ public class Post {
         this.importanceValue = importanceValue;
     }
 
-    public Date getCreationDate() {
-        return creationDate;
+    public Date getDateCreated() {
+        return dateCreated;
     }
 
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
+    public void setDateCreated(Date creationDate) {
+        this.dateCreated = creationDate;
     }
 
     public List<Comment> getComments() {
