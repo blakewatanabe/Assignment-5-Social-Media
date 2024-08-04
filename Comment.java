@@ -1,14 +1,16 @@
+package org.example.javafxtest;
+
 import java.util.Date;
 
 public class Comment {
     private String content;
     private User author;
-    private Date creationDate;
+    private Date dateCreated;
 
-    public Comment(String content, User author, Date creationDate) {
+    public Comment(String content, User author, Date dateCreated) {
         this.content = content;
         this.author = author;
-        this.creationDate = creationDate;
+        this.dateCreated = dateCreated;
     }
 
     // Getters and setters
@@ -29,10 +31,10 @@ public class Comment {
     }
 
     public Date getCreationDate() {
-        return creationDate;
+        return dateCreated;
     }
 
     public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
+        this.dateCreated = creationDate;
     }
 }

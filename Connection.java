@@ -1,12 +1,15 @@
+package org.example.javafxtest;
+
+// Representing a "weighted" edge between two users.
 public class Connection {
     private User fromUser;
     private User toUser;
-    private String type;
+    private String relation;
 
-    public Connection(User fromUser, User toUser, String type) {
+    public Connection(User fromUser, User toUser, String relation) {
         this.fromUser = fromUser;
         this.toUser = toUser;
-        this.type = type;
+        this.relation = relation;
     }
 
     // Getters and setters
@@ -26,11 +29,11 @@ public class Connection {
         this.toUser = toUser;
     }
 
-    public String getType() {
-        return type;
+    public String getRelation() {
+        return relation;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setRelation(String relation) {
+        this.relation = relation;
     }
 }

@@ -1,3 +1,5 @@
+package org.example.javafxtest;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -5,7 +7,7 @@ public class User {
     private String userName;
     private String realName;
     private List<Connection> connections;
-    private List<Post> postsAuthored;
+    private List<Post> postsCreated;
     private List<Post> postsViewed;
     private List<Comment> comments;
 
@@ -13,7 +15,7 @@ public class User {
         this.userName = userName;
         this.realName = realName;
         this.connections = new ArrayList<>();
-        this.postsAuthored = new ArrayList<>();
+        this.postsCreated = new ArrayList<>();
         this.postsViewed = new ArrayList<>();
         this.comments = new ArrayList<>();
     }
@@ -44,11 +46,11 @@ public class User {
     }
 
     public List<Post> getPostsAuthored() {
-        return postsAuthored;
+        return postsCreated;
     }
 
-    public void setPostsAuthored(List<Post> postsAuthored) {
-        this.postsAuthored = postsAuthored;
+    public void setPostsAuthored(List<Post> postsCreated) {
+        this.postsCreated = postsCreated;
     }
 
     public List<Post> getPostsViewed() {
