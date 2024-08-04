@@ -11,13 +11,14 @@ public class Post {
     private List<Comment> comments;
     private List<User> viewers;
 
-    public Post(String content, int numberOfComments, int numberOfViews, Date creationDate) {
+    public Post(String content, int numberOfComments, int numberOfViews, Date dateCreated) {
         this.content = content;
         this.numberOfComments = numberOfComments;
         this.numberOfViews = numberOfViews;
         this.dateCreated = dateCreated;
         this.comments = new ArrayList<>();
         this.viewers = new ArrayList<>();
+        // This might be only needed for talking point 1.
         // Weights can be changed to make one worth more than the other (alpha is for # of comments, beta is # of views)
         calculateImportanceValue(0.5, 0.5); // This might be only needed for talking point 1.
     }
