@@ -1,0 +1,80 @@
+@startuml
+
+' Define Users
+object alicejohnson01 {
+  userName = "alicejohnson01"
+  realName = "Alice Johnson"
+  age = 25
+  gender = "Female"
+  location = "New York"
+}
+
+object bobsmith02 {
+  userName = "bobsmith02"
+  realName = "Bob Smith"
+  age = 30
+  gender = "Male"
+  location = "Los Angeles"
+}
+
+object caroldavis03 {
+  userName = "caroldavis03"
+  realName = "Carol Davis"
+  age = 22
+  gender = "Female"
+  location = "Chicago"
+}
+
+object davidwilson04 {
+  userName = "davidwilson04"
+  realName = "David Wilson"
+  age = 28
+  gender = "Male"
+  location = "Houston"
+}
+
+' Define Connections
+alicejohnson01 --> bobsmith02 : follows
+"bobsmith02" --> davidwilson04 : friends
+davidwilson04 --> caroldavis03 : blocked
+bobsmith02 --> alicejohnson01 : co-worker
+
+' Define Posts
+object postByAlice {
+  content = "Hello, world!"
+  date = "2024-07-16"
+}
+
+object postByDavid {
+  content = "I'm happy to share that I just got a new job at XYZ corporation!"
+  date = "2024-03-01"
+}
+
+' Define Comments
+object bobComment1 {
+  content = "Nice post!"
+  date = "2024-07-18"
+}
+
+object bobComment2 {
+  content = "Congrats David!"
+  date = "2024-07-18"
+
+
+object aliceComment {
+  content = "Congratulations David!"
+  date = "2024-03-03"
+}
+
+' Relationships between users and posts/comments
+alicejohnson01 *-- postByAlice : authored
+postByAlice o-- bobsmith02 : viewed
+postByAlice *-- bobComment1 : comment by Bob Smith
+
+caroldavis03 o-- postByAlice : viewed
+davidwilson04 *-- postByDavid : authored
+postByDavid o-- alicejohnson01 : viewed
+postByDavid *-- bobComment2 : comment by Bob Smith
+postByDavid *-- aliceComment : comment by Alice Johnson
+
+@enduml
