@@ -1,3 +1,5 @@
+package javafxtest;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +10,8 @@ public class User {
     private List<Post> postsCreated;
     private List<Post> postsViewed;
     private List<Comment> comments;
+    private double positionX;
+    private double positionY;
 
     public User(String userName, String realName, int age, String gender, String location) {
         this.userName = userName;
@@ -65,6 +69,19 @@ public class User {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public double getPositionX() {
+        return positionX;
+    }
+
+    public void setPosition(double x, double y) {
+        this.positionX = x;
+        this.positionY = y;
+    }
+
+    public double getPositionY() {
+        return positionY;
     }
 
     public void addConnection(Connection connection) {

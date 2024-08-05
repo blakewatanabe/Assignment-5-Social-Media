@@ -1,3 +1,5 @@
+package javafxtest;
+
 // Representing a "weighted" edge between two users.
 public class Connection {
     private User fromUser;

@@ -1,3 +1,5 @@
+package javafxtest;
+
 import java.util.Date;
 
 public class Comment {
