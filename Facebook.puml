@@ -1,7 +1,7 @@
 @startuml
 
 ' Define Users
-object alicejohnson01 {
+object alicejohnson01 #FFFFED {
   userName = "alicejohnson01"
   realName = "Alice Johnson"
   age = 25
@@ -9,7 +9,7 @@ object alicejohnson01 {
   location = "New York"
 }
 
-object bobsmith02 {
+object bobsmith02 #FFFFED {
   userName = "bobsmith02"
   realName = "Bob Smith"
   age = 30
@@ -17,7 +17,7 @@ object bobsmith02 {
   location = "Los Angeles"
 }
 
-object caroldavis03 {
+object caroldavis03 #FFFFED {
   userName = "caroldavis03"
   realName = "Carol Davis"
   age = 22
@@ -25,7 +25,7 @@ object caroldavis03 {
   location = "Chicago"
 }
 
-object davidwilson04 {
+object davidwilson04 #FFFFED {
   userName = "davidwilson04"
   realName = "David Wilson"
   age = 28
@@ -34,34 +34,34 @@ object davidwilson04 {
 }
 
 ' Define Connections
-alicejohnson01 --> bobsmith02 : follows
+alicejohnson01 --> bobsmith02  : follows
 "bobsmith02" --> davidwilson04 : friends
 davidwilson04 --> caroldavis03 : blocked
 bobsmith02 --> alicejohnson01 : co-worker
 
 ' Define Posts
-object postByAlice {
+object postByAlice #AAFFAA {
   content = "Hello, world!"
   date = "2024-07-16"
 }
 
-object postByDavid {
+object postByDavid #AAFFAA{
   content = "I'm happy to share that I just got a new job at XYZ corporation!"
   date = "2024-03-01"
 }
 
 ' Define Comments
-object bobComment1 {
-  content = "Nice post!"
+object bobComment1 #0000FF {
+  content = "Hello to you too!"
   date = "2024-07-18"
 }
 
-object bobComment2 {
+object bobComment2 #0000FF{
   content = "Congrats David!"
   date = "2024-07-18"
+}
 
-
-object aliceComment {
+object aliceComment #0000FF {
   content = "Congratulations David!"
   date = "2024-03-03"
 }
